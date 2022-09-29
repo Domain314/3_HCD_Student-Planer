@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/newtask.css">
+  <link rel="stylesheet" href="styles/uicolors.css">
+  <link rel="stylesheet" href="styles/boxes.css">
+  <link rel="stylesheet" href="styles/google_icons.css">
+  <link rel="stylesheet" href="styles/today.css">
+  <link rel="stylesheet" href="styles/daily.css">
+  <link rel="stylesheet" href="styles/calendar.css">
+
+  <!-- CDN google font roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!--Google Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <title>The Student Planer</title>
+</head>
+
+<body >
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <div class="header-box">
+      <div class="header">
+
+        <div class="left-header">
+          <div class="logo-title">
+            <i class="material-icons md-36 logo-icon">timeline</i>
+            <h1>The Student Planer</h1>
+          </div>
+          <div id="informations">
+            <div id="date-block">
+              <div id="wochentag"></div>
+              <div id="date"></div>
+              <div id="time"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-header">
+          <button id="set-profile">
+            <h3 class="profile-letters" id="profile-letters"></h3>
+          </button>
+          <p id="user-name"></p>
+          <button id="logout">Logout</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content-box background">
+      <div class="box-header">
+        <h1 class="box-title">Calendar</h1>
+        <i class="material-icons md-24 logo-icon" id="add-task">tune</i>
+
+      </div>
+
+      <!-- CALENDER -->
+      <div class="calendar">
+        <div class="cal-container"></div>
+      </div>
+      <!-- END OF CALENDER -->
+
+    </div>
+
+    <!-- TODAY BOX -->
+    <div class="content-box background" style="min-height:0px;">
+      <div class="box-header">
+        <h1 class="box-title">Today</h1>
+        <i id="add-task" class="material-icons md-24 logo-icon">tune</i>
+      </div>
+
+      <div class="today-tasks" id="today-tasks">
+        <!-- today tasks -->
+      </div>
+    </div>
+    <!-- END OF TODAY BOX-->
+
+  </div>
+  <!-- END OF MAINGRID -->
+
+
+  <!-- PROFIL INFO & FORM -->
+  <div id="update-profile" class="update-profile-container" style="display: none;">
+    <div class="new-task-content">
+
+      <form action="#">
+        <div class="update-profile-header">
+          <h3>Personal Information</h3>
+          <i id="close-update-profile" class="material-icons md-24 logo-icon">close</i>
+        </div>
+
+        <div class="input-field">
+          <input type="text" placeholder="First Name" id="prename" />
+        </div>
+        <div class="input-field">
+          <input type="text" placeholder="Last Name" id="surname" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="date" placeholder="" id="birthday" />
+        </div>
+        <div class="input-field">
+          <div><input type="checkbox" placeholder="" id="display-name" />
+            <center><a>Display name instead user-login?</a></center>
+          </div>
+        </div>
+
+        <button id="update-profile-button">Submit</button>
+      </form>
+
+    </div>
+  </div>
+<!-- END OF PROFIL INFO & FORM -->
+
+
+  <!-- FOCUSED DAY -->
+  <div class="focus-container"></div>
+  <!-- END OF FOCUSED DAY -->
+
+  <!-- NEW TASK -->
+  <div id="new-task-container" class="new-task-container" style="display: none;">
+    <div class="new-task-content">
+
+      <form action="#">
+        <div class="new-task-header">
+          <h3>New Task</h3>
+          <i id="close-new-task" class="material-icons md-24 logo-icon">close</i>
+        </div>
+
+        <div class="input-field">
+          <input type="text" placeholder="Task Name" id="task-name" />
+        </div>
+        <div class="input-field">
+          <input type="text" placeholder="Task Info" id="task-info" />
+        </div>
+
+        <h5>Start</h5>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="date" placeholder="" id="task-date" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="time" placeholder="" id="task-time" />
+        </div>
+        <div class="input-field-project">
+          <div><input type="checkbox" placeholder="" id="task-project" />
+            <a>is Project?</a>
+          </div>
+        </div>
+
+        <h5>End</h5>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="date" placeholder="" id="task-date-end" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="time" placeholder="" id="task-time-end" />
+        </div>
+        <button id="new-task-button">Create</button>
+
+      </form>
+    </div>
+
+  </div>
+  <!-- END OF NEW TASK -->
+
+</body>
+
+</html>

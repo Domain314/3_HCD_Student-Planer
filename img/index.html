@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/uicolors.css">
+    <link rel="stylesheet" href="styles/boxes.css">
+    <link rel="stylesheet" href="styles/google_icons.css">
+    <link rel="stylesheet" href="styles/today.css">
+    <link rel="stylesheet" href="styles/daily.css">
+    <link rel="stylesheet" href="styles/calendar.css">
+
+    <!-- CDN google font roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- JQuery, AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>The Student Planer</title>
+</head>
+
+<body onload="toDoOnLoad()">
+    <div class="main-grid">
+        <div class="header-box">
+            <div class="header">
+                <div class="left-header">
+                    <div class="logo-title">
+                        <i class="material-icons md-36 logo-icon">timeline</i>
+                        <h1>The Student Planer</h1>
+                    </div>
+
+                    <div id="informations">
+                        <div id="date-block">
+                            <div id="wochentag"></div>
+                            <div id="date"></div>
+                            <div id="time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-header">
+                    <div class="profile-picture" id="profile-picture"></div>
+                    <p id="user-name">Dominik</p>
+                    <p id="user-role">Informatik</p>
+                    <button id="logout">Logout</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="content-box background">
+            <div class="box-header">
+                <h1 class="box-title">Calendar</h1>
+                <i class="material-icons md-24 logo-icon">tune</i>
+
+            </div>
+
+            <!-- CALENDER -->
+            <div class="calendar">
+              <div class="cal-container"></div>
+            </div>
+            <!-- END OF CALENDER -->
+
+        </div>
+
+        <!-- TODAY BOX -->
+
+        <!-- Today box header -->
+        <div class="content-box background">
+            <div class="box-header">
+                <h1 class="box-title">Today</h1>
+                <i class="material-icons md-24 logo-icon">tune</i>
+            </div>
+
+            <div class="today-tasks">
+                <!-- today tasks -->
+                <!------------------------->
+                <!--DEMO DATA today tasks-->
+                <!------------------------->
+                <div class="single-today-task">
+                    <p id="task-title">Demo Task 1</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Do Something</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Do Something else</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Bla bla</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Stress im Meeting bekommen</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">hallo 1</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">was geht 1</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Task 4</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Tasdfasdf</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Task 1</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Task 1</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+
+                <div class="single-today-task">
+                    <p id="task-title">Task 1</p>
+                    <div class="task-checks">
+                        <i id="delete-today-task" class="material-icons md-24 logo-icon">delete_forever</i>
+                        <i id="check-today-task" class="material-icons md-24 logo-icon">radio_button_unchecked</i>
+                    </div>
+                </div>
+                <!------------------------------------->
+                <!--END END END DEMO DATA today tasks-->
+                <!------------------------------------->
+            </div>
+
+
+        </div>
+        <div class="content-box background">
+            <div class="box-header">
+                <h1 class="box-title">Daily</h1>
+                <i class="material-icons md-24 logo-icon">tune</i>
+            </div>
+
+            <!--GRID for daily tasks-->
+            <div class="daily-tasks-grid">
+
+                <!--------------------------------------->
+                <!--------DEMO DATA daily task----------->
+                <!--------------------------------------->
+
+                <!--Single daily task-->
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">water_drop</i>
+                    <p>Water</p>
+                </div>
+
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">fitness_center</i>
+                    <p>Fitness</p>
+                </div>
+
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">spa</i>
+                    <p>Health</p>
+                </div>
+
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">edit_calendar</i>
+                    <p>Calendar</p>
+                </div>
+
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">mail</i>
+                    <p>Check mail</p>
+                </div>
+
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">group</i>
+                    <p>Friends</p>
+                </div>
+
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">book</i>
+                    <p>Read</p>
+                </div>
+
+                <div id="single-daily-task" class="single-daily-task">
+                    <i class="material-icons md-48 logo-icon">piano</i>
+                    <p>Practice</p>
+                </div>
+                <!--------------------------------------->
+                <!--------END DEMO DATA daily task------->
+                <!--------------------------------------->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOCUSED DAY -->
+    <div class="focus-container"></div>
+    <!-- END OF FOCUSED DAY -->
+
+    <!--Front End Scripts-->
+    <script src="./js/time.js"></script>
+
+    <!-- Back End Scripts -->
+    <script src="./js/req.js"></script>
+
+</body>
+
+</html>

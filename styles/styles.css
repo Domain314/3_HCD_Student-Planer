@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--blue);
+    background-image: url(../img/wave-background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-image: linear-gradient(130deg, var(--backgroundA1), var(--backgroundA2)); */
+    min-height: 100vh;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+.logo-title i {
+    margin-right: 15px;
+}
+
+.main-grid {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 50px;
+    column-gap: 15px;
+    padding-bottom: 20px;
+}
+
+.content-box {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    max-height: 600px;
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: .1s ease;
+    overflow-y: auto;
+}
+
+.header-box {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 200px;
+    margin-bottom: 30px;
+    padding: 0px;
+    transition: .3s ease;
+    background-image: url("../img/scrum.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 120px 101%;
+}
+
+
+.content-box:hover {
+    transform: scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.background {
+    background-color: rgba(255, 255, 255, 0.172);
+    border-radius: 10px;
+}
+
+/* contentbox-sizes, responsivness */
+/*ab 0 px*/
+@media screen and (min-width: 0px) {
+    .content-box {
+        max-width: 100%;
+        margin: 0px 20px;
+    }
+    .header-box {
+        max-width: 100%;
+        margin: 0px 0px;
+        background-image: none;
+    }
+    .right-header {
+        margin-right: 20px;
+    }
+    .left-header {
+        margin-left: 20px;
+    }
+}
+
+/*ab 1000px*/
+@media screen and (min-width: 1000px) {
+    .content-box {
+        max-width: 480px;
+        margin: 0px 0px;
+    }
+    .header-box {
+        max-width: 480px;
+        margin: 0px 0px;
+        background-image: url("../img/scrum.svg");
+
+    }
+    .right-header {
+        margin-right: 0px;
+    }
+    .left-header {
+        margin-left: 0px;
+    }
+}
+/*ab 1600px*/
+@media screen and (min-width: 1480px) {
+    .content-box {
+        max-width: 700px;
+        margin: 0px 0px;
+    }
+    .header-box {
+        max-width: 700px;
+        margin: 0px 0px;
+    }
+}
+
+/*ab 1600px*/
+@media screen and (min-width: 1600px) {
+    .content-box {
+        max-width: 700px;
+        margin: 0px 0px;
+    }
+    .header-box {
+        max-width: 700px;
+        margin: 0px 0px;
+    }
+}
+
+/*ab 2000px*/
+@media screen and (min-width: 2000px) {
+    .content-box {
+        max-width: 980px;
+        margin: 0px 0px;
+    }
+    .header-box {
+        max-width: 980px;
+        margin: 0px 0px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.872);
+}
+
+#informations {
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    margin-top: 10px;
+    padding-left: 54px;
+}
+
+#date-block div {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.right-header {
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.372);
+    border-radius: 10px;
+    color: black;
+}
+
+#profile-picture {
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/dominik_profil.jpg);
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#logout {
+    border-style: none;
+    width: 80px;
+    height: 30px;
+    color: black;
+    background-color: var(--backgroundA1);
+    border-radius: 10px;
+    transition: .3s ease;
+    margin-top: 10px;
+}
+
+#logout:hover {
+    transform: scale(0.96);
+    cursor: pointer;
+}
+
+

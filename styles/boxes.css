@@ -1,0 +1,20 @@
+.box-title {
+    font-weight: 300;
+    font-size: 25px;
+    color: black;
+}
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-header i {
+    transition: .3s ease;
+}
+
+.box-header i:hover {
+    color: white;
+    transform: scale(0.98);
+    cursor: pointer;
+}
